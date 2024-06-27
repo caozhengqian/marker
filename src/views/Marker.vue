@@ -28,12 +28,12 @@
       <SQL v-if="index === '5'"/>
       <RenTi v-if="index === '6'"/>
       <p style="position:fixed;right:0px;bottom:0px;color:red;font-size: 22px;line-height: 60px">沪ICP备2023021271号</p>
-      <router-link :to="{ name: 'jiyi'}">
-        User1111111111111111111111111111111111111111111111111111111
-      </router-link>
-      <router-link :to="{ name: 'inserData'}">
-        User222222222222222222222222222222222222222222222222222
-      </router-link>
+<!--      <router-link :to="{ name: 'jiyi'}">-->
+<!--        User1111111111111111111111111111111111111111111111111111111-->
+<!--      </router-link>-->
+<!--      <router-link :to="{ name: 'inserData'}">-->
+<!--        User222222222222222222222222222222222222222222222222222-->
+<!--      </router-link>-->
     </div>
   </div>
 
@@ -65,7 +65,7 @@ export default {
   },
   data() {
     return {
-      index:'1',
+      index:'2',
     }
   },
   methods: {

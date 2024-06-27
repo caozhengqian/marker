@@ -6,7 +6,7 @@
         <el-menu
             active-text-color="#ffd04b"
             background-color="#545c64"
-            default-active="2-1"
+            default-active="2-3"
             class="el-menu-vertical-demo"
             text-color="#fff"
             @open="_menuOpen"
@@ -15,7 +15,7 @@
           <el-menu-item @click="_menuItem" index="2-1">配置css架构</el-menu-item>
           <el-menu-item @click="_menuItem" index="2-2">配置脚手架</el-menu-item>
           <el-menu-item @click="_menuItem" index="2-3">配置nginx</el-menu-item>
-          <el-menu-item @click="_menuItem" index="2-4">配置公用组件</el-menu-item>
+          <el-menu-item @click="_menuItem" index="2-4">配置webpack</el-menu-item>
           <el-menu-item @click="_menuItem" index="2-5">配置CDN</el-menu-item>
 
         </el-menu>
