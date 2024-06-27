@@ -369,7 +369,6 @@
 </template>
 
 <script>
-import nginxData from './nginxdata'
 export default {
   name: "PeiNginx",
   data() {
@@ -471,7 +470,7 @@ server 193.169.185.21:8080 back_up weight=2 max_conns=1000 fail_timeout=10s max_
         proxy_next_upstream_tries:"3",//发生错误后，转发几次，再不行就报错
         proxy_next_upstream_timeout:"3",//发生错误后几秒没有返回则换下一台
       },
-      output:nginxData
+      output:""
     }
   },
   mounted() {
@@ -620,5 +619,8 @@ proxy_ignore_client_bort ${this.form.proxy_ignore_client_bort}#客户端主动�
 </script>
 
 <style scoped>
-
+  p{
+    color:red;
+    font-size: 25px;
+  }
 </style>
