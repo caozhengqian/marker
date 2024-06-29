@@ -128,14 +128,34 @@ export default {
       console.log(`%c text1=${text1}`, "color:red");
       this.output = text.slice(0, -1)+"%"+text1.slice(0, -1)
       console.log(`%c ${this.output}`, "color:red");
-      try {
-        await navigator.clipboard.writeText(this.output);
+      // try {
+      //   await navigator.clipboard.writeText(this.output);
+      //   this.copyButtonName = '已复制'
+      //   setTimeout(()=>{
+      //     this.copyButtonName = '生成webstorm插件规则'
+      //   },3000)
+      // } catch (err) {
+      //   console.log(err)
+      // }
+      const copyElem = document.createElement('textarea');
+      let styles = copyElem.style;
+      styles.position = 'fixed';
+      styles.zIndex = '0';
+      styles.left = '-500px';
+      styles.top = '-500px';
+      copyElem.value = this.output;
+      document.body.appendChild(copyElem);
+      copyElem.focus();
+      copyElem.select();
+      let result = false;
+      result = document.execCommand('copy');
+      if (result) {
         this.copyButtonName = '已复制'
-        setTimeout(()=>{
-          this.copyButtonName = '生成webstorm插件规则'
-        },3000)
-      } catch (err) {
-        console.log(err)
+          setTimeout(()=>{
+            this.copyButtonName = '生成webstorm插件规则'
+          },3000)
+        copyElem.remove();
+      } else {
       }
     },
     _cFormJson(){

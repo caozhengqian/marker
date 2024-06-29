@@ -101,14 +101,34 @@ export default {
       console.log(`%c this.output=== ${this.output}`, "color:red");
 
 
-      try {
-        await navigator.clipboard.writeText(this.output.slice(1).slice(0, -1));
+      // try {
+      //   await navigator.clipboard.writeText(this.output.slice(1).slice(0, -1));
+      //   this.copyButtonName = '已复制'
+      //   setTimeout(()=>{
+      //     this.copyButtonName = '生成webstorm插件规则'
+      //   },3000)
+      // } catch (err) {
+      //   console.log(err)
+      // }
+      const copyElem = document.createElement('textarea');
+      let styles = copyElem.style;
+      styles.position = 'fixed';
+      styles.zIndex = '0';
+      styles.left = '-500px';
+      styles.top = '-500px';
+      copyElem.value = this.output.slice(1).slice(0, -1);
+      document.body.appendChild(copyElem);
+      copyElem.focus();
+      copyElem.select();
+      let result = false;
+      result = document.execCommand('copy');
+      if (result) {
         this.copyButtonName = '已复制'
         setTimeout(()=>{
           this.copyButtonName = '生成webstorm插件规则'
         },3000)
-      } catch (err) {
-        console.log(err)
+        copyElem.remove();
+      } else {
       }
     },
     _cFormJson(){
