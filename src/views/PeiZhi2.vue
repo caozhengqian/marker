@@ -13,7 +13,7 @@
             @close="_menuClose"
         >
           <el-menu-item @click="_menuItem" index="2-1">配置css架构</el-menu-item>
-          <el-menu-item @click="_menuItem" index="2-2">配置脚手架</el-menu-item>
+          <el-menu-item @click="_menuItem" index="2-2">配置低代码页面</el-menu-item>
           <el-menu-item @click="_menuItem" index="2-3">配置nginx</el-menu-item>
           <el-menu-item @click="_menuItem" index="2-4">配置webpack</el-menu-item>
           <el-menu-item @click="_menuItem" index="2-5">配置CDN</el-menu-item>
