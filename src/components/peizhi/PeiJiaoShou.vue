@@ -1,6 +1,6 @@
 <template>
   <div style="width: 1200px">
-    根据后台接口生成页面
+    <h2>根据后台接口生成页面 <a href="webstorm低代码插件.zip" download="webstorm低代码插件.zip">webstorm插件下载</a></h2>
     <el-tabs type="card" class="demo-tabs">
       <el-tab-pane label="生成表单">
         <el-row>
@@ -161,3 +161,47 @@ export default {
 <style scoped>
 
 </style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

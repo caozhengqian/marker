@@ -6,7 +6,7 @@
         <el-menu
             active-text-color="#ffd04b"
             background-color="#545c64"
-            default-active="2-3"
+            default-active="2-2"
             class="el-menu-vertical-demo"
             text-color="#fff"
             @open="_menuOpen"
@@ -49,6 +49,9 @@ export default {
       index:'0'
     }
   },
+  created(){
+    this._menuItem({"index":"2-2","indexPath":["2-2"],"active":true})
+  },
   methods: {
     _menuOpen(key,keyPath) {
       // this.index = key
@@ -58,7 +61,7 @@ export default {
       // this.index = key
     },
     _menuItem(dom) {
-      console.log(JSON.stringify(dom.index))
+      console.log(JSON.stringify(dom))
       this.index = dom.index
     },
   }
