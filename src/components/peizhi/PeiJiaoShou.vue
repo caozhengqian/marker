@@ -50,7 +50,7 @@
     <el-dialog title="使用方法" v-model="dia" @close="dia=false" style="width:1000px">
       <div>
         <el-card style="width: 800px;">
-          <template #header>导入插件</template>
+          <template #header>导入《webstorm低代码插件.zip》，无需解压</template>
           <img
               src="./img/import.png"
               style="width: 100%"
