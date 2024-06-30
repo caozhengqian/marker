@@ -1,6 +1,7 @@
 <template>
   <div style="width: 1200px">
     <h2>根据后台接口生成页面 <a href="webstorm低代码插件.zip" download="webstorm低代码插件.zip">webstorm插件下载</a></h2>
+    <el-button type="primary" @click="_use" style="margin-top: 10px">查看使用方法</el-button>
     <el-tabs type="card" class="demo-tabs">
       <el-tab-pane label="生成表单">
         <el-row>
@@ -45,11 +46,32 @@
         <ZengShan/>
       </el-tab-pane>
     </el-tabs>
+
+    <el-dialog title="使用方法" v-model="dia" @close="dia=false" style="width:1000px">
+      <div>
+        <el-card style="width: 800px;">
+          <template #header>导入插件</template>
+          <img
+              src="./img/import.png"
+              style="width: 100%"
+          />
+        </el-card>
+        <el-card style="width: 800px">
+          <template #header>使用插件</template>
+          <img
+              src="./img/use.png"
+              style="width: 100%"
+          />
+        </el-card>
+      </div>
+    </el-dialog>
   </div>
 </template>
 
 <script>
 import ZengShan from "@/components/peizhi/ZengShan.vue";
+import imporgPNG from "@/components/peizhi/img/import.png";
+// import ZengShan from "@/components/peizhi/ZengShan.vue";
 export default {
   name: "PeiJiaoShou",
   components: {
@@ -59,6 +81,7 @@ export default {
     return{
       formJson:`{"name":"","age":"","sex":""}`,
       listForm:{},
+      dia:false,
       listJosn:[],
       jsonPraseList:[],
       output:"abc",
@@ -68,6 +91,9 @@ export default {
     }
   },
   methods:{
+    _use(){
+      this.dia = true
+    },
     _formJson(v){
     },
     async copyText(v){
@@ -159,7 +185,9 @@ export default {
 </script>
 
 <style scoped>
-
+.demo-tabs{
+  margin-top: 30px;
+}
 </style>
 
 
