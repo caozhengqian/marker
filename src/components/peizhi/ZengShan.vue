@@ -17,7 +17,7 @@
                                   ref="listForm1"
                                   label-width="100px"
                               >
-                                <span style="padding-left: 20px">查询输入接口编辑</span>
+                                <span style="padding-left: 20px">查询输入接口</span>
                                 <div  v-for="(item,index) in listJosn" :key="index">
                                   <el-form-item :label="item.name+':'" >
                                     <el-input v-model="listJosn[index].cn" style="width:250px">

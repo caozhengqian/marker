@@ -6,18 +6,18 @@
         <el-menu
             active-text-color="#ffd04b"
             background-color="#545c64"
-            default-active="2-2"
+            default-active="2-1"
             class="el-menu-vertical-demo"
             text-color="#fff"
             @open="_menuOpen"
             @close="_menuClose"
         >
           <el-menu-item @click="_menuItem" index="2-1">配置css架构</el-menu-item>
+          <el-menu-item @click="_menuItem" index="2-4">配置公用组件</el-menu-item>
           <el-menu-item @click="_menuItem" index="2-2">配置低代码页面</el-menu-item>
+          <el-menu-item @click="_menuItem" index="2-6">公司技术沉淀</el-menu-item>
+          <el-menu-item @click="_menuItem" index="2-5">配置webpack</el-menu-item>
           <el-menu-item @click="_menuItem" index="2-3">配置nginx</el-menu-item>
-          <el-menu-item @click="_menuItem" index="2-4">配置webpack</el-menu-item>
-          <el-menu-item @click="_menuItem" index="2-5">配置CDN</el-menu-item>
-
         </el-menu>
       </div>
       <div style="margin-left: 220px;margin-top: 10px" >
@@ -26,6 +26,7 @@
         <PeiNginx v-else-if="index === '2-3'"/>
         <PeiGongYong v-else-if="index === '2-4'"/>
         <PeiCDN v-else-if="index === '2-5'"/>
+        <PeiJiShu v-else-if="index === '2-6'"/>
       </div>
     </div>
   </div>
@@ -38,10 +39,11 @@ import PeiJiaoShou from "@/components/peizhi/PeiJiaoShou.vue";
 import PeiNginx from "@/components/peizhi/PeiNginx.vue";
 import PeiGongYong from "@/components/peizhi/PeiGongYong.vue";
 import PeiCDN from "@/components/peizhi/PeiCDN.vue";
+import PeiJiShu from "@/components/peizhi/PeiJiShu.vue";
 
 export default {
   name: "PeiZhi2",
-  components: {PeiCDN, PeiGongYong, PeiNginx, PeiJiaoShou, PeiCss},
+  components: {PeiCDN, PeiGongYong, PeiNginx, PeiJiaoShou, PeiCss,PeiJiShu},
   computed: {
   },
   data() {
@@ -50,7 +52,7 @@ export default {
     }
   },
   created(){
-    this._menuItem({"index":"2-2","indexPath":["2-2"],"active":true})
+    this._menuItem({"index":"2-1","indexPath":["2-1"],"active":true})
   },
   methods: {
     _menuOpen(key,keyPath) {

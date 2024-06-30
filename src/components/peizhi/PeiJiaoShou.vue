@@ -1,6 +1,7 @@
 <template>
   <div style="width: 1200px">
-    <h2>根据后台接口生成页面 <a href="webstorm低代码插件.zip" download="webstorm低代码插件.zip">webstorm插件下载</a></h2>
+    <h2>依靠（插件）和（后台接口）即可生成页面，与各种低代码平台互补，提高前端效率。
+      <br/><a href="webstorm低代码插件.zip" download="webstorm低代码插件.zip">webstorm插件下载</a></h2>
     <el-button type="primary" @click="_use" style="margin-top: 10px">查看使用方法</el-button>
     <el-tabs type="card" class="demo-tabs">
       <el-tab-pane label="生成表单">
