@@ -1,10 +1,11 @@
 <template>
   <div class="readme">
-    <h1>打包工具通用流程：<br/><a href="https://github.com/caozhengqian/webstemplate" target="_blank">webpack架构git地址</a></h1>
-    <h2>webpack4构建流程</h2>
+    <p class="titles">解决新的打包工具问世带来的不兼容问题，抽出打包工具通用流程：</p>
+    <br/><a href="https://github.com/caozhengqian/webstemplate" target="_blank">webpack架构git地址</a>
+    <h3>webpack4构建流程</h3>
     <p> 1. 单页面中同时构建`vue`、`react`和`typscript`</p>
     <p> 2. `构建优化`+`生产优化`</p>
-    <h2>1. 基本编译配置</h2>
+    <h3>1. 基本编译配置</h3>
       <p>1） html编译（`HtmlWebpackPlugin`）</p>
       <p>2） css编译</p>
         <p class="p30">* less编译（`less-loader`）</p>
@@ -21,12 +22,12 @@
         <p class="p30">* 按需引入polyfill（`useBuiltIns`、`corejs`）</p>
         <p class="p30">* 是否是第三方库，写页面无需配置（`run-time`）</p>
       <p>4） img编译（`file-loader`）</p>
-    <h2>2. 开发环境编译配置</h2>
+    <h3>2. 开发环境编译配置</h3>
       <p>1）热更新，热部署（`HotModuleReplacementPlugin`）</p>
       <p>2） 加速编译dll(`webpack/lib/DllPlugin`、`webpack/lib/DllReferencePlugin`)</p>
       <p>3） html、css、js、img按照基本配置</p>
       <p></p>
-    <h2>3. 生产环境编译配置</h2>
+    <h3>3. 生产环境编译配置</h3>
       <p>1）html编译压缩+hash（`HtmlWebpackPlugin`）</p>
       <p>2）css编译压缩+hash</p>
         <p class="p30">* 抽离并hash(`MiniCssExtractPlugin`)</p>
@@ -53,13 +54,25 @@ export default {
 .readme{
   line-height: 1.5;
 }
-h2{
+.titles{
+  color: #1677ff;
+  line-height: 1.5;
+  font-size: 20px;
+}
+.titles{
+  padding-left: 0;
+  color: #1677ff;
+  line-height: 1.5;
+  font-size: 20px;
+}
+h3{
   margin-top: 20px;
+  padding-left: 50px;
 }
 p{
-  line-height: 2;
-  padding-left: 20px;
-  font-size: 20px;
+  line-height: 1.8;
+  padding-left: 70px;
+  font-size: 18px;
 }
 .p30{
   margin-left: 30px;

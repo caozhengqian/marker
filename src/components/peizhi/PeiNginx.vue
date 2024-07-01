@@ -1,4 +1,5 @@
 <template>
+  <p class="titles">nginx配置化，解决nginx繁琐深奥的配置问题</p>
   <div style="width:1200px;display:flex;border:1px yellow solid">
     <div style="display:inline-block;width:50%;border: 1px solid red">
       <el-form
@@ -622,5 +623,20 @@ proxy_ignore_client_bort ${this.form.proxy_ignore_client_bort}#客户端主动�
   p{
     color:red;
     font-size: 25px;
+  }
+  .titles{
+    padding-left: 0;
+    color: #1677ff;
+    line-height: 1.5;
+    font-size: 20px;
+  }
+  h3{
+    margin-top: 20px;
+    padding-left: 50px;
+  }
+  p{
+    line-height: 1.8;
+    padding-left: 70px;
+    font-size: 18px;
   }
 </style>

@@ -1,9 +1,16 @@
 <template>
   <div style="width: 1200px">
-    <h2>依靠（插件）和（后台接口）即可生成页面，与各种低代码平台互补，提高前端效率。
-      <br/><a href="webstorm低代码插件.zip" download="webstorm低代码插件.zip">webstorm插件下载</a></h2>
-    <el-button type="primary" @click="_use" style="margin-top: 10px">查看使用方法</el-button>
-    <el-tabs type="card" class="demo-tabs">
+
+    <el-row style="margin-top: 20px">
+      <el-col  :span="12">
+        <p class="titles">1、根据后台接口生成页面，解决前端开发效率问题</p>
+        <p class="titles">2、可根据不同语言不同需求修改本地插件</p>
+      </el-col>
+      <el-col :span="5"><h2 style="padding-top: 10px"><a href="webstorm低代码插件.zip" download="webstorm低代码插件.zip">webstorm插件下载</a></h2></el-col>
+      <el-col :span="6"><el-button type="warning" @click="_use" style="margin-top: 10px">查看使用方法</el-button></el-col>
+    </el-row>
+
+    <el-tabs type="card" class="demo-tabs" @tab-click="_tab">
       <el-tab-pane label="生成表单">
         <el-row>
           <el-col  :span="6">
@@ -47,20 +54,25 @@
         <ZengShan/>
       </el-tab-pane>
     </el-tabs>
+    <div style="border: 1px solid red"></div>
+    <el-card style="width: 800px;">
+      <template #header>预览页面</template>
+      <img v-if="tabSelect==='生成表单'"
+          src="./img/form.png"
+          style="width: 100%"
+      />
+      <img v-else
+          src="./img/table.png"
+          style="width: 100%"
+      />
+    </el-card>
 
-    <el-dialog title="使用方法" v-model="dia" @close="dia=false" style="width:1000px">
+    <el-dialog title="使用方法" v-model="dia" @close="dia=false" style="width:1200px">
       <div>
-        <el-card style="width: 800px;">
-          <template #header>导入《webstorm低代码插件.zip》，无需解压</template>
+        <el-card style="width: 1150px;">
+          <template #header>无需解压zip文件</template>
           <img
-              src="./img/import.png"
-              style="width: 100%"
-          />
-        </el-card>
-        <el-card style="width: 800px">
-          <template #header>使用插件</template>
-          <img
-              src="./img/use.png"
+              src="./img/importuse.png"
               style="width: 100%"
           />
         </el-card>
@@ -71,8 +83,6 @@
 
 <script>
 import ZengShan from "@/components/peizhi/ZengShan.vue";
-import imporgPNG from "@/components/peizhi/img/import.png";
-// import ZengShan from "@/components/peizhi/ZengShan.vue";
 export default {
   name: "PeiJiaoShou",
   components: {
@@ -88,10 +98,20 @@ export default {
       output:"abc",
       you:`[{"lable":"男","value":"man"},{"lable":"女","value":"woman"}]`,
       copyButtonName:'生成webstorm插件规则',
-      isShow:false
+      isShow:false,
+      tabSelect:'生成表单'
     }
   },
+  mounted() {
+    this._cFormJson()
+  },
+
   methods:{
+    _tab(v){
+      // 生成增删改查
+      this.tabSelect = v.props.label
+      console.log(`%c ${JSON.stringify(v)}`, "color:red");
+    },
     _use(){
       this.dia = true
     },
@@ -188,6 +208,20 @@ export default {
 <style scoped>
 .demo-tabs{
   margin-top: 30px;
+  border: 1px solid #c0c4cc;
+}
+.titles{
+  color: #1677ff;
+  line-height: 1.5;
+  font-size: 20px;
+}
+h3{
+  margin-top: 20px;
+}
+p{
+  line-height: 1.8;
+  padding-left: 20px;
+  font-size: 18px;
 }
 </style>
 
