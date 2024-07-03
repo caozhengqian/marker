@@ -2,7 +2,7 @@
 <template>
   <div>
     <el-menu
-        style="position: fixed;width:100%;height:60px;"
+        style="position: fixed;width:100%;height:60px; z-index: 9999"
         :default-active="index"
         mode="horizontal"
         background-color="#545c64"
