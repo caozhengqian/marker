@@ -3,8 +3,11 @@
 
     <el-row style="margin-top: 20px">
       <el-col  :span="12">
-        <p class="titles">1、根据后台接口生成页面，解决前端开发效率问题</p>
-        <p class="titles">2、可根据不同语言不同需求修改本地插件</p>
+        <p class="titles">为什么要低代码工具插件化</p>
+        <p class="titles1">1、低代码平台<span class="r">复杂度高</span>，自研<span class="r">时间成本高</span>，采购<span class="r">金钱成本高</span></p>
+        <p class="titles1">2、有较高的<span class="r">学习成本</span>，无法自行解决bug</p>
+        <p class="titles1">3、<span class="r">不能100%满足</span>各个产品线的<span class="r">需求</span>，且<span class="r">无法自定义</span></p>
+        <p class="titles1">4、<span class="r">无法适应</span>前端频繁的<span class="r">技术升级</span>、框架更换</p>
       </el-col>
       <el-col :span="5"><h2 style="padding-top: 10px"><a href="webstorm低代码插件.zip" download="webstorm低代码插件.zip">webstorm插件下载</a></h2></el-col>
       <el-col :span="6"><el-button type="warning" @click="_use" style="margin-top: 10px">查看使用方法</el-button></el-col>
@@ -211,9 +214,18 @@ export default {
   border: 1px solid #c0c4cc;
 }
 .titles{
+  line-height: 1.5;
   color: #1677ff;
+  font-size: 20px;
+}
+.titles1{
+  padding-left: 50px;
+  color:black;
   line-height: 1.5;
   font-size: 20px;
+}
+.r{
+  color: red;
 }
 h3{
   margin-top: 20px;

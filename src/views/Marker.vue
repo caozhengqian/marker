@@ -11,11 +11,11 @@
         @select="handleSelect"
     >
 <!--      <el-menu-item index="1" style="font-size: 22px">前端架构</el-menu-item>-->
-      <el-menu-item index="2" style="font-size: 22px">前端架构</el-menu-item>
+      <el-menu-item index="2" style="font-size: 22px">前端技术架构</el-menu-item>
 <!--      <el-menu-item index="3" style="font-size: 22px">计算机语言</el-menu-item>-->
 <!--      <el-menu-item index="4" style="font-size: 22px">linux</el-menu-item>-->
 <!--      <el-menu-item index="5" style="font-size: 22px">SQL</el-menu-item>-->
-<!--      <el-menu-item index="6" style="font-size: 22px">人体工程学</el-menu-item>-->
+<!--      <el-menu-item index="6" style="font-size: 22px">前端团队建设</el-menu-item>-->
 <!--      <el-menu-item index="6" style="font-size: 22px">aa-->
 <!--      </el-menu-item>-->
     </el-menu>

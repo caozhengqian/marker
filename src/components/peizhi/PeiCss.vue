@@ -1,8 +1,12 @@
 <template>
   <div class="readme" style="width: 100%">
-    <p class="titles">1、解决各种前端样式架构问题;</p>
-    <p class="titles">2、架构思路可延伸至android、IOS、小程序、鸿蒙等未来新技术;</p>
-    <br/><a href="https://github.com/caozhengqian/css-frame" target="_blank">样式架构git地址</a>
+    <p class="titles">为什么要做CSS架构（<a href="https://github.com/caozhengqian/css-frame" target="_blank">github地址</a>）</p>
+    <p class="titles1"><span class="b">1、多人编写项目，</span>样式重复、<span class="b">互相</span>阅读有障碍</p>
+    <p class="titles1"><span class="b">2、class</span>命名混乱</p>
+    <p class="titles1"><span class="b">3、css</span>功能未提炼，<span class="b">每个人都要实现一遍，比如（清除浮动、图片间隙等）</span></p>
+    <p class="titles1"><span class="b">4、前端</span>没有样式积累</p>
+    <p class="titles1"><span class="b">5、</span>未抽出布局理念<span class="b">，不能适应android、IOS、小程序、鸿蒙等未来新技术</span></p>
+    <br/>
     <h3>1. Settings基础样式层，颜色、边框、、阴影、层级等</h3>
     <p>1） 根据设计稿定义基础样式，在项目settings文件夹下定义变量</p>
     <p>2） 在vite.config.js中引入全局</p>
@@ -38,10 +42,19 @@ export default {
   line-height: 1.5;
 }
 .titles{
-  padding-left: 0;
   color: #1677ff;
+  padding-left: 0;
   line-height: 1.5;
   font-size: 20px;
+}
+.titles1{
+  padding-left: 50px;
+  color: red;
+  line-height: 1.5;
+  font-size: 20px;
+}
+.b{
+  color:black;
 }
 h3{
   margin-top: 20px;
@@ -51,6 +64,9 @@ p{
   line-height: 1.8;
   padding-left: 70px;
   font-size: 18px;
+}
+span{
+  color:red
 }
 
 </style>

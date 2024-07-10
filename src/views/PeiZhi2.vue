@@ -12,12 +12,12 @@
             @open="_menuOpen"
             @close="_menuClose"
         >
-          <el-menu-item @click="_menuItem" index="2-1">配置css架构</el-menu-item>
-          <el-menu-item @click="_menuItem" index="2-4">配置公用组件</el-menu-item>
-          <el-menu-item @click="_menuItem" index="2-2">配置低代码页面</el-menu-item>
-          <el-menu-item @click="_menuItem" index="2-6">公司技术沉淀</el-menu-item>
-          <el-menu-item @click="_menuItem" index="2-5">配置webpack</el-menu-item>
-          <el-menu-item @click="_menuItem" index="2-3">配置nginx</el-menu-item>
+          <el-menu-item @click="_menuItem" index="2-1">css架构</el-menu-item>
+          <el-menu-item @click="_menuItem" index="2-4">公用组件</el-menu-item>
+          <el-menu-item @click="_menuItem" index="2-2">低代码</el-menu-item>
+          <el-menu-item @click="_menuItem" index="2-6">积累工程</el-menu-item>
+          <el-menu-item @click="_menuItem" index="2-5">webpack</el-menu-item>
+          <el-menu-item @click="_menuItem" index="2-3">一键生成nginx配置</el-menu-item>
         </el-menu>
       </div>
       <div style="margin-left: 220px;margin-top: 10px" >

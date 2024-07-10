@@ -1,5 +1,7 @@
 <template>
-  <p class="titles">nginx配置化，解决nginx繁琐深奥的配置问题</p>
+  <p class="titles"><span>（尽请期待）</span>解决nginx繁琐深奥的配置问题,抽出常用场景的nginx配置</p>
+  <p class="titles1">根据业务场景（营销分发、秒杀高并发等）生成nginx.config</p>
+  <p class="titles1">根据功能配置nginx.config（CPU多核心负载、TCP三次握手配置、TCP连接配置、缓冲区配置、拥堵控制、优化I/O读写、降低读写等）</p>
   <div style="width:1200px;display:flex;border:1px yellow solid">
     <div style="display:inline-block;width:50%;border: 1px solid red">
       <el-form
@@ -626,6 +628,11 @@ proxy_ignore_client_bort ${this.form.proxy_ignore_client_bort}#客户端主动�
   }
   .titles{
     padding-left: 0;
+    line-height: 1.5;
+    font-size: 20px;
+  }
+  .titles1{
+    padding-left: 50px;
     color: #1677ff;
     line-height: 1.5;
     font-size: 20px;

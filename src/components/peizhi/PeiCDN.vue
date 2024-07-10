@@ -1,7 +1,8 @@
 <template>
   <div class="readme">
-    <p class="titles">解决新的打包工具问世带来的不兼容问题，抽出打包工具通用流程：</p>
-    <br/><a href="https://github.com/caozhengqian/webstemplate" target="_blank">webpack架构git地址</a>
+    <p class="titles">解决新的打包工具问世带来的兼容和学习问题，抽出打包工具通用流程（<a href="https://github.com/caozhengqian/webstemplate" target="_blank">github地址</a>）</p>
+    <p class="titles1"> 1、任何打包技术都是将各种文件打包成html、css、js和文件(图片)</p>
+    <p class="titles1"> 2、开发环境和生产环境分开，开发的热跟新、生产的优化，举例webpack4</p>
     <h3>webpack4构建流程</h3>
     <p> 1. 单页面中同时构建`vue`、`react`和`typscript`</p>
     <p> 2. `构建优化`+`生产优化`</p>
@@ -55,12 +56,12 @@ export default {
   line-height: 1.5;
 }
 .titles{
-  color: #1677ff;
+  padding-left: 0;
   line-height: 1.5;
   font-size: 20px;
 }
-.titles{
-  padding-left: 0;
+.titles1{
+  padding-left: 50px;
   color: #1677ff;
   line-height: 1.5;
   font-size: 20px;
