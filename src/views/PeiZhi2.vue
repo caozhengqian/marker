@@ -14,7 +14,7 @@
         >
           <el-menu-item @click="_menuItem" index="2-1">css架构</el-menu-item>
           <el-menu-item @click="_menuItem" index="2-4">公用组件</el-menu-item>
-          <el-menu-item @click="_menuItem" index="2-2">低代码</el-menu-item>
+          <el-menu-item @click="_menuItem" index="2-2">低代码插件</el-menu-item>
           <el-menu-item @click="_menuItem" index="2-6">积累工程</el-menu-item>
           <el-menu-item @click="_menuItem" index="2-5">webpack</el-menu-item>
           <el-menu-item @click="_menuItem" index="2-3">一键生成nginx配置</el-menu-item>

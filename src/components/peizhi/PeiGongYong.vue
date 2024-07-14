@@ -6,20 +6,28 @@
     <p class="titles1">3、组件<span class="b">无法快速普及</span>，公司技术平台（比如wiki）<span class="b">无法生动展示组件</span>（elementui能展示组件使用、组件代码、组件API）</p>
     <br/>
 
-  <h3>一：编写组件</h3>
-    <p>在src中完成组件功能</p>
-  <h3>二：打包组件</h3>
-    <p>copy组件到packages</p>
-    <p>在packages/index.ts引入组件</p>
-    <p>npm run lib生成lib文件</p>
-  <h3>三：发布组件</h3>
-    <p>修改command/package.josn的version版本号</p>
-    <p>拷贝command/index.d.ts和command/package.json到lib目录下</p>
-    <p>npm publish上传npm</p>
-  <h3>四：完善文档（必写）</h3>
-    <p>进入docs/.vitepress/config编写路由</p>
-    <p>新增组件的演示、code和API</p>
-    <p>打包发布</p>
+  <h3>基本使用</h3>
+    <p>npm 安装</p>
+    <p style="padding-left: 100px">  npm i @webscom/vue3-coms </p>
+    <p style="padding-left: 100px">  npm i element-plus @element-plus/icons-vue</p>
+    <p>main.js引用</p>
+    <p style="padding-left: 100px">import MUI from "@webscom/vue3-coms"</p>
+    <p style="padding-left: 100px">import "@webscom/vue3-coms/style.css"</p>
+    <p style="padding-left: 100px">createApp(App).use(ElementPlus).use(MUI).mount('#app')</p>
+<!--  <h3>一：编写组件</h3>-->
+<!--    <p>在src中完成组件功能</p>-->
+<!--  <h3>二：打包组件</h3>-->
+<!--    <p>copy组件到packages</p>-->
+<!--    <p>在packages/index.ts引入组件</p>-->
+<!--    <p>npm run lib生成lib文件</p>-->
+<!--  <h3>三：发布组件</h3>-->
+<!--    <p>修改command/package.josn的version版本号</p>-->
+<!--    <p>拷贝command/index.d.ts和command/package.json到lib目录下</p>-->
+<!--    <p>npm publish上传npm</p>-->
+<!--  <h3>四：完善文档（必写）</h3>-->
+<!--    <p>进入docs/.vitepress/config编写路由</p>-->
+<!--    <p>新增组件的演示、code和API</p>-->
+<!--    <p>打包发布</p>-->
   </div>
 </template>
 
