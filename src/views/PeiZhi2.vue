@@ -6,17 +6,17 @@
         <el-menu
             active-text-color="#ffd04b"
             background-color="#545c64"
-            default-active="2-4"
+            default-active="2-2"
             class="el-menu-vertical-demo"
             text-color="#fff"
             @open="_menuOpen"
             @close="_menuClose"
         >
-          <el-menu-item @click="_menuItem" index="2-4">公用组件</el-menu-item>
           <el-menu-item @click="_menuItem" index="2-2">低代码插件</el-menu-item>
-          <el-menu-item @click="_menuItem" index="2-1">css架构</el-menu-item>
-          <el-menu-item @click="_menuItem" index="2-5">webpack</el-menu-item>
-          <el-menu-item @click="_menuItem" index="2-6">积累工程</el-menu-item>
+<!--          <el-menu-item @click="_menuItem" index="2-4">公用组件</el-menu-item>-->
+<!--          <el-menu-item @click="_menuItem" index="2-1">css架构</el-menu-item>-->
+<!--          <el-menu-item @click="_menuItem" index="2-5">webpack</el-menu-item>-->
+<!--          <el-menu-item @click="_menuItem" index="2-6">积累工程</el-menu-item>-->
           <el-menu-item @click="_menuItem" index="2-3">一键生成nginx配置</el-menu-item>
         </el-menu>
       </div>
@@ -52,7 +52,7 @@ export default {
     }
   },
   created(){
-    this._menuItem({"index":"2-4","indexPath":["2-4"],"active":true})
+    this._menuItem({"index":"2-2","indexPath":["2-4"],"active":true})
   },
   methods: {
     _menuOpen(key,keyPath) {

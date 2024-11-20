@@ -21,12 +21,12 @@
     </el-menu>
 
     <div style="padding-top: 60px">
-      <Web1 v-if="index === '1'"/>
+<!--      <Web1 v-if="index === '1'"/>-->
       <PeiZhi2 v-if="index === '2'"/>
-      <JiSuanJi3 v-if="index === '3'"/>
-      <Linux v-if="index === '4'"/>
-      <SQL v-if="index === '5'"/>
-      <RenTi v-if="index === '6'"/>
+<!--      <JiSuanJi3 v-if="index === '3'"/>-->
+<!--      <Linux v-if="index === '4'"/>-->
+<!--      <SQL v-if="index === '5'"/>-->
+<!--      <RenTi v-if="index === '6'"/>-->
       <p style="position:fixed;right:0px;bottom:0px;color:red;font-size: 22px;line-height: 60px">沪ICP备2023021271号</p>
 <!--      <router-link :to="{ name: 'jiyi'}">-->
 <!--        User1111111111111111111111111111111111111111111111111111111-->
